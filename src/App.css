@@ -1,38 +1,48 @@
-.App {
+body {
+  font-family: Arial;
+  background-color: #121212;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  padding: 10px;
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 10px;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div {
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.comparison-grid {
+  display: flex;             /* This aligns children horizontally */
+  flex-direction: row;       /* Ensures they stay side-by-side */
+  justify-content: center;   /* Centers them on the screen */
+  gap: 40px;                 /* Adds space between the two cards */
+  align-items: flex-start;   /* Keeps them aligned at the top */
+  padding: 20px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player-card {
+  flex: 1;                   /* Allows cards to grow equally */
+  max-width: 450px;          /* Prevents them from getting too wide */
+  text-align: center;        /* Keeps the text centered within the card */
+  border: 1px solid #444;    /* Optional: subtle border for definition */
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.vs-badge {
+  align-self: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e74c3c; /* Red */
+  text-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+  font-style: italic;
 }
